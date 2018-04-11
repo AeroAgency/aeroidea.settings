@@ -1,0 +1,23 @@
+{
+  "name": "aero/aero.settings",
+  "description": "Settings Module Aero",
+  "type": "bitrix-module",
+  "keywords": [
+    "bitrix",
+    "admin",
+    "api"
+  ],
+  "support": {
+    "source": "http://gl.aeroidea.ru/aero/aero.settings"
+  },
+  "authors": [
+    {
+      "name": "aeroidea"
+    }
+  ],
+  "require": {
+    "php":">=7.0.0",
+    "digitalwand/digitalwand.admin_helper": "2.1.0",
+    "composer/installers": "~1"
+  }
+}
