@@ -1,10 +1,10 @@
 <?php
-namespace Aero\Settings\Options\AdminInterface;
+namespace Aeroidea\Settings\Options\AdminInterface;
 
-use Aero\Settings\Options\ValuesTable;
-use Aero\Settings\Options\Widget\EmptyDateTimeWidget;
-use Aero\Settings\Options\Widget\StringCheckboxWidget;
-use Aero\Settings\Util;
+use Aeroidea\Settings\Options\ValuesTable;
+use Aeroidea\Settings\Options\Widget\EmptyDateTimeWidget;
+use Aeroidea\Settings\Options\Widget\StringCheckboxWidget;
+use Aeroidea\Settings\Util;
 use Bitrix\Main\ArgumentException;
 use Bitrix\Main\Localization\Loc;
 use DigitalWand\AdminHelper\Helper\AdminBaseHelper;

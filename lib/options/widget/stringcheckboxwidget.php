@@ -1,6 +1,6 @@
 <?php
 
-namespace Aero\Settings\Options\Widget;
+namespace Aeroidea\Settings\Options\Widget;
 
 use DigitalWand\AdminHelper\Widget\CheckboxWidget;
 

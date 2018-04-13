@@ -1,7 +1,7 @@
 <?php
-namespace Aero\Settings\Options\AdminInterface;
+namespace Aeroidea\Settings\Options\AdminInterface;
 
-use Aero\Settings\Options\OptionTable;
+use Aeroidea\Settings\Options\OptionTable;
 use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);

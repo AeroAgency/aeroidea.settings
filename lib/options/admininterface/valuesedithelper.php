@@ -1,10 +1,10 @@
 <?php
-namespace Aero\Settings\Options\AdminInterface;
+namespace Aeroidea\Settings\Options\AdminInterface;
 
-use Aero\Settings\Config;
-use Aero\Settings\Options\ConfigurationTable;
-use Aero\Settings\Options\ValuesTable;
-use Aero\Settings\Util;
+use Aeroidea\Settings\Config;
+use Aeroidea\Settings\Options\ConfigurationTable;
+use Aeroidea\Settings\Options\ValuesTable;
+use Aeroidea\Settings\Util;
 use Bitrix\Main\Localization\Loc;
 use DigitalWand\AdminHelper\EntityManager;
 use DigitalWand\AdminHelper\Helper\AdminEditHelper;

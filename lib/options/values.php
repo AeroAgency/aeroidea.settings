@@ -1,5 +1,5 @@
 <?php
-namespace Aero\Settings\Options;
+namespace Aeroidea\Settings\Options;
 use Bitrix\Main\Entity\DataManager;
 use Bitrix\Main\Entity\Validator\Unique;
 use Bitrix\Main\Localization\Loc;
