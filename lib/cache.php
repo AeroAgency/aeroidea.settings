@@ -1,6 +1,6 @@
 <?php
 /**
- * Aero.settings module
+ * Aeroidea.settings module
  *
  * @category    aeroidea
  * @link        http://aeroindea.ru
