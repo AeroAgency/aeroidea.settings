@@ -15,7 +15,6 @@
   "license": "MIT",
   "authors": [
     {
-      "name": [
         {
           "name": "Michael Dadaev",
           "email": "dadaev@aeroidea.ru",
@@ -26,7 +25,6 @@
           "email": "zenkovich@aeroidea.ru",
           "role": "Developer"
         }
-      ]
     }
   ],
   "require": {
