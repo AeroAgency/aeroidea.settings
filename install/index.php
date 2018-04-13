@@ -8,7 +8,7 @@ use Bitrix\Main\Localization\Loc;
  * @category    Aeroidea
  * @link        http://aeroidea.ru
  */
-Class aero_settings extends CModule
+Class aeroidea_settings extends CModule
 {
     /**
      * ID модуля
