@@ -10,6 +10,7 @@
   "support": {
     "source": "http://gl.aeroidea.ru/aero/aero.settings"
   },
+  "license": "MIT",
   "authors": [
     {
       "name": "aeroidea"
