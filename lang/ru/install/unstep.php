@@ -1,1 +1,1 @@
-<?$MESS["MSG_DELETED"] = "Модуль aero.settings успешно удален из системы";
+<?$MESS["MSG_DELETED"] = "Модуль aeroidea.settings успешно удален из системы";

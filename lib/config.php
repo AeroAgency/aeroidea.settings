@@ -3,7 +3,7 @@
 /**
  * Aero settings module
  *
- * @category    aero
+ * @category    aeroidea
  * @link        http://aeroidea.ru
  */
 
@@ -18,7 +18,7 @@ use Bitrix\Main\Entity\DataManager;
 /**
  * Работа с настройками
  *
- * @category    aero
+ * @category    aeroidea
  */
 class Config
 {
@@ -27,7 +27,7 @@ class Config
      *
      * @var string
      */
-    protected static $optionCacheTag = 'aero_settings_options';
+    protected static $optionCacheTag = 'aeroidea_settings_options';
 
     /**
      * @var null

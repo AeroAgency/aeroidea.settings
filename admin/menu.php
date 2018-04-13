@@ -8,7 +8,7 @@ use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 
 try {
-    if (!Loader::includeModule('digitalwand.admin_helper') || !Loader::includeModule('aero.settings')) {
+    if (!Loader::includeModule('digitalwand.admin_helper') || !Loader::includeModule('aeroidea.settings')) {
         return;
     }
 } catch (\Bitrix\Main\LoaderException $e) {
