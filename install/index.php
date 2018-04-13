@@ -72,7 +72,7 @@ Class aeroidea_settings extends CModule
             [
                 'main',
                 'OnPageStart',
-                '\Aeroidea\Tools\Module',
+                '\Aeroidea\Settings\Module',
                 'onPageStart',
             ]
         ];
