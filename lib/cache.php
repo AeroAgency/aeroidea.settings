@@ -2,7 +2,7 @@
 /**
  * Aero.settings module
  *
- * @category    aero
+ * @category    aeroidea
  * @link        http://aeroindea.ru
  */
 namespace Aeroidea\Settings;

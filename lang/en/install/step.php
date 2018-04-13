@@ -1,1 +1,1 @@
-<?$MESS["MSG_INSTALLED"] = "Module aero.settings installed";
+<?$MESS["MSG_INSTALLED"] = "Module aeroidea.settings installed";

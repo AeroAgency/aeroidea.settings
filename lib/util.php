@@ -3,7 +3,7 @@
 /**
  * Aero settings module
  *
- * @category    aero
+ * @category    aeroidea
  * @link        http://aeroidea.ru
  */
 
@@ -13,7 +13,7 @@ namespace Aeroidea\Settings;
 /**
  * Утилиты
  *
- * @category    aero
+ * @category    aeroidea
  */
 class Util
 {

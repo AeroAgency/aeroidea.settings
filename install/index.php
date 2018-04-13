@@ -6,7 +6,7 @@ use Bitrix\Main\Localization\Loc;
  * Aero settings module
  *
  * @category    Aeroidea
- * @link        http://aero.ru
+ * @link        http://aeroidea.ru
  */
 Class aero_settings extends CModule
 {
@@ -14,7 +14,7 @@ Class aero_settings extends CModule
      * ID модуля
      * @var string
      */
-    public $MODULE_ID = 'aero.settings';
+    public $MODULE_ID = 'aeroidea.settings';
 
     /**
      * Версия модуля
