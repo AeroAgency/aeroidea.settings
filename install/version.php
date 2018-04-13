@@ -1,6 +1,6 @@
 <?
 /**
- * Aero.main module
+ * Aeroidea.main module
  *
  * @category	Aeroidea
  * @link		http://aeroidea.ru

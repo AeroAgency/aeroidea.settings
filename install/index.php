@@ -3,7 +3,7 @@
 use Bitrix\Main\Localization\Loc;
 
 /**
- * Aero settings module
+ * Aeroidea settings module
  *
  * @category    Aeroidea
  * @link        http://aeroidea.ru
@@ -44,7 +44,7 @@ Class aero_settings extends CModule
      * Имя партнера
      * @var string
      */
-    public $PARTNER_NAME = "AERO";
+    public $PARTNER_NAME = "AEROIDEA";
 
     /**
      * Ссылка на сайт партнера
@@ -72,7 +72,7 @@ Class aero_settings extends CModule
             [
                 'main',
                 'OnPageStart',
-                '\Aero\Tools\Module',
+                '\Aeroidea\Tools\Module',
                 'onPageStart',
             ]
         ];

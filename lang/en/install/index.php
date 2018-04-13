@@ -1,3 +1,3 @@
 <?
-$MESS["MODULE_NAME"] = "Settings Module Aero";
-$MESS["MODULE_DESC"] = "Settings Module Aero";
+$MESS["MODULE_NAME"] = "Settings Module Aeroidea";
+$MESS["MODULE_DESC"] = "Settings Module Aeroidea";
