@@ -5,7 +5,7 @@
  * @category    aero
  * @link        http://aeroindea.ru
  */
-namespace Aero\Settings;
+namespace Aeroidea\Settings;
 
 /**
  * Модель кэша

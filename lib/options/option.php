@@ -1,6 +1,6 @@
 <?php
-namespace Aero\Settings\Options;
-use Aero\Main\Util;
+namespace Aeroidea\Settings\Options;
+use Aeroidea\Main\Util;
 use Bitrix\Main\Entity\DataManager;
 use Bitrix\Main\Entity\Event;
 use Bitrix\Main\Entity\EventResult;

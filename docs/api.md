@@ -12,7 +12,7 @@
 Пример использования:
 
 ```
-use Aero\Settings\Config;
+use Aeroidea\Settings\Config;
 
 // Получение значения настройки root_domain конфигурации proxy
 $conf = Config::get('proxy', 'root_domain');

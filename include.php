@@ -7,7 +7,7 @@
  */
 
 
-namespace Aero\Settings;
+namespace Aeroidea\Settings;
 
 /**
  * Базовый каталог модуля

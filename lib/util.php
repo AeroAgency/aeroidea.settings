@@ -7,7 +7,7 @@
  * @link        http://aeroidea.ru
  */
 
-namespace Aero\Settings;
+namespace Aeroidea\Settings;
 
 
 /**

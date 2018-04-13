@@ -1,9 +1,9 @@
 <?php
-namespace Aero\Settings\Options\AdminInterface;
+namespace Aeroidea\Settings\Options\AdminInterface;
 
-use Aero\Settings\Options\ConfigurationTable;
-use Aero\Settings\Options\OptionValueTable;
-use Aero\Settings\Options\ValuesTable;
+use Aeroidea\Settings\Options\ConfigurationTable;
+use Aeroidea\Settings\Options\OptionValueTable;
+use Aeroidea\Settings\Options\ValuesTable;
 use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);

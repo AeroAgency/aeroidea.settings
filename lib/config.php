@@ -7,11 +7,11 @@
  * @link        http://aeroidea.ru
  */
 
-namespace Aero\Settings;
+namespace Aeroidea\Settings;
 
-use Aero\Settings\Options\ConfigurationTable;
-use Aero\Settings\Options\OptionTable;
-use Aero\Settings\Options\ValuesTable;
+use Aeroidea\Settings\Options\ConfigurationTable;
+use Aeroidea\Settings\Options\OptionTable;
+use Aeroidea\Settings\Options\ValuesTable;
 use Bitrix\Main\ArgumentException;
 use Bitrix\Main\Entity\DataManager;
 

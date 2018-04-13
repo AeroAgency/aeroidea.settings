@@ -1,9 +1,9 @@
 <?php
 
-use Aero\Settings\Options\AdminInterface\ConfigurationEditHelper;
-use Aero\Settings\Options\AdminInterface\OptionEditHelper;
-use Aero\Settings\Options\AdminInterface\OptionListHelper;
-use Aero\Settings\Options\AdminInterface\ValuesListHelper;
+use Aeroidea\Settings\Options\AdminInterface\ConfigurationEditHelper;
+use Aeroidea\Settings\Options\AdminInterface\OptionEditHelper;
+use Aeroidea\Settings\Options\AdminInterface\OptionListHelper;
+use Aeroidea\Settings\Options\AdminInterface\ValuesListHelper;
 use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 

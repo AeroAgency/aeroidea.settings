@@ -1,6 +1,6 @@
 <?php
 
-namespace Aero\Settings\Options\AdminInterface;
+namespace Aeroidea\Settings\Options\AdminInterface;
 
 use Bitrix\Main\Localization\Loc;
 use DigitalWand\AdminHelper\Helper\AdminInterface;

@@ -1,7 +1,7 @@
 <?php
-namespace Aero\Settings\Options\AdminInterface;
+namespace Aeroidea\Settings\Options\AdminInterface;
 
-use Aero\Settings\Options\ConfigurationTable;
+use Aeroidea\Settings\Options\ConfigurationTable;
 use Bitrix\Main\Localization\Loc;
 use DigitalWand\AdminHelper\Helper\AdminSectionEditHelper;
 
