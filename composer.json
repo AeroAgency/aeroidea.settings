@@ -1,11 +1,13 @@
 {
   "name": "aeroidea/aeroidea.settings",
-  "description": "Settings Module Aero",
+  "description": "Aeroidea`s module for Bitrix with graphic interface to use custom settings",
   "type": "bitrix-module",
   "keywords": [
     "bitrix",
     "admin",
-    "api"
+    "api",
+    "custom settings",
+    "settings"
   ],
   "support": {
     "source": "http://gl.aeroidea.ru/aero/aero.settings"
@@ -13,7 +15,18 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "aeroidea"
+      "name": [
+        {
+          "name": "Michael Dadaev",
+          "email": "dadaev@aeroidea.ru",
+          "role": "Developer"
+        },
+        {
+          "name": "Oleg Zenkovich",
+          "email": "zenkovich@aeroidea.ru",
+          "role": "Developer"
+        }
+      ]
     }
   ],
   "require": {
