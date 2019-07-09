@@ -66,7 +66,6 @@ class ValuesEditHelper extends AdminEditHelper
             }
             return $resultData;
         }
-
         return false;
     }
 
@@ -99,7 +98,6 @@ class ValuesEditHelper extends AdminEditHelper
             }
         }
 
-        
         /**
          * Делаем сохранение в 2 этапа:
          *
@@ -121,8 +119,10 @@ class ValuesEditHelper extends AdminEditHelper
                 return $saveResult;
             }
         }
-
-        $entityManager = new static::$entityManager(static::getModel(), empty($this->data) ? array() : $this->data, $id, $this);
+        if(!$this->data) {
+            $this->data = $this->loadElement();
+        }
+        $entityManager = new static::$entityManager(static::getModel(), $this->data, $id, $this);
         $saveResult = $entityManager->save();
         $this->addNotes($entityManager->getNotes());
         if(!$saveResult->isSuccess()) {
