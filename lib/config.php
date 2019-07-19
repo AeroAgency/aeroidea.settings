@@ -30,9 +30,9 @@ class Config
     protected static $optionCacheTag = 'aeroidea_settings_options';
 
     /**
-     * @var null
+     * @var array
      */
-    protected static $memoryCacheOptions = null;
+    protected static $memoryCacheOptions = [];
 
     /**
      * Получение значения опции конфигурации
