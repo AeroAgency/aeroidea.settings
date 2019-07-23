@@ -3,17 +3,14 @@ namespace Aeroidea\Settings\Options\AdminInterface;
 
 use Aeroidea\Settings\Options\ValuesTable;
 use Aeroidea\Settings\Options\Widget\EmptyDateTimeWidget;
+use Aeroidea\Settings\Options\Widget\FileWidget;
 use Aeroidea\Settings\Options\Widget\StringCheckboxWidget;
+use Aeroidea\Settings\Options\Widget\ImageWidget;
 use Aeroidea\Settings\Util;
 use Bitrix\Main\ArgumentException;
 use Bitrix\Main\Localization\Loc;
 use DigitalWand\AdminHelper\Helper\AdminBaseHelper;
 use DigitalWand\AdminHelper\Helper\AdminInterface;
-use DigitalWand\AdminHelper\Widget\CheckboxWidget;
-use DigitalWand\AdminHelper\Widget\ComboBoxWidget;
-use DigitalWand\AdminHelper\Widget\DateTimeWidget;
-use DigitalWand\AdminHelper\Widget\FileWidget;
-use DigitalWand\AdminHelper\Widget\HLIBlockFieldWidget;
 use DigitalWand\AdminHelper\Widget\IblockElementWidget;
 use DigitalWand\AdminHelper\Widget\NumberWidget;
 use DigitalWand\AdminHelper\Widget\StringWidget;
@@ -182,6 +179,13 @@ class ValuesAdminInterface extends AdminInterface
                 case 'file': {
                     $arFields[$arConfigElement['CODE']] = [
                         'WIDGET' => new FileWidget(),
+                        'HEADER' => false
+                    ];
+                    break;
+                }
+                case 'image': {
+                    $arFields[$arConfigElement['CODE']] = [
+                        'WIDGET' => new ImageWidget(),
                         'HEADER' => false
                     ];
                     break;
