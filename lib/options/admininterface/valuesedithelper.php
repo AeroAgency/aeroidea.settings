@@ -1,4 +1,5 @@
 <?php
+
 namespace Aeroidea\Settings\Options\AdminInterface;
 
 use Aeroidea\Settings\Config;
@@ -6,16 +7,18 @@ use Aeroidea\Settings\Options\ConfigurationTable;
 use Aeroidea\Settings\Options\ValuesTable;
 use Aeroidea\Settings\Util;
 use Bitrix\Main\Localization\Loc;
+use CFile;
+use COption;
 use DigitalWand\AdminHelper\EntityManager;
 use DigitalWand\AdminHelper\Helper\AdminEditHelper;
 
 Loc::loadMessages(__FILE__);
+
 /**
  * Хелпер описывает интерфейс, выводящий список настроек конфигурации.
  *
  * {@inheritdoc}
  */
-
 class ValuesEditHelper extends AdminEditHelper
 {
     protected static $model = ConfigurationTable::class;
@@ -59,7 +62,7 @@ class ValuesEditHelper extends AdminEditHelper
             $resultData = $result->fetch();
 
             $arrAddData = ValuesTable::getConfigurationOptionsValues($this->getPk());
-            if(!empty($arrAddData)) {
+            if (!empty($arrAddData)) {
                 foreach ($arrAddData as $arrAddDataElement) {
                     $resultData[$arrAddDataElement['CODE']] = $arrAddDataElement['VALUE'];
                 }
@@ -89,12 +92,31 @@ class ValuesEditHelper extends AdminEditHelper
     {
         /** @var EntityManager $entityManager */
         $configData = Util::getIndexedArray(ValuesTable::getConfigurationOptionsValues($this->getPk()), 'CODE');
+        $requestFields = $_REQUEST['FIELDS'];
+        $upload_dir = $_SERVER["DOCUMENT_ROOT"] . "/" . COption::GetOptionString("main", "upload_dir", "upload") . '/tmp';
 
         foreach ($this->data as $key => $value) {
-            if($configData[$key]) {
+            if ($configData[$key]) {
                 unset($this->data[$key]);
-                unset($this->data[$key.'_TEXT_TYPE']);
-                $configData[$key]['VALUE'] = $value;
+                unset($this->data[$key . '_TEXT_TYPE']);
+
+                $fileKey = $key . '_FILE';
+                if (array_key_exists($fileKey, $requestFields)) {
+                    if (is_array($requestFields[$fileKey])) {
+                        $file = $requestFields[$fileKey];
+                        $file['tmp_name'] = $upload_dir . $file['tmp_name'];
+                        $imageId = CFile::SaveFile($file, 'settings');
+                        if ($imageId) {
+                            $configData[$key]['VALUE'] = CFile::GetPath($imageId);
+                        } else {
+                            $configData[$key]['VALUE'] = $value;
+                        }
+                    } else {
+                        $configData[$key]['VALUE'] = $requestFields[$fileKey];
+                    }
+                } else {
+                    $configData[$key]['VALUE'] = $value;
+                }
             }
         }
 
@@ -115,17 +137,17 @@ class ValuesEditHelper extends AdminEditHelper
             $entityManager = new static::$entityManager($model, $data, $configDataItem['VALUE_ID'], $this);
             $saveResult = $entityManager->save();
             $this->addNotes($entityManager->getNotes());
-            if(!$saveResult->isSuccess()) {
+            if (!$saveResult->isSuccess()) {
                 return $saveResult;
             }
         }
-        if(!$this->data) {
+        if (!$this->data) {
             $this->data = $this->loadElement();
         }
         $entityManager = new static::$entityManager(static::getModel(), $this->data, $id, $this);
         $saveResult = $entityManager->save();
         $this->addNotes($entityManager->getNotes());
-        if(!$saveResult->isSuccess()) {
+        if (!$saveResult->isSuccess()) {
             return $saveResult;
         }
         Config::clearCache();

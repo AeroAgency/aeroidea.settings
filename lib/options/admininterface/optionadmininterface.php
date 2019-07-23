@@ -58,6 +58,7 @@ class OptionAdminInterface extends AdminInterface
                             'text' => 'Текст',
                             'checkbox' => 'Флаг',
                             'file' => 'Файл',
+                            'image' => 'Изображение',
                             'datetime' => 'Дата со временем',
                             'iblock_element' => 'Привязка к элементу инфоблока'
                         ],
