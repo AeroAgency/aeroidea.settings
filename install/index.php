@@ -119,9 +119,30 @@ Class aeroidea_settings extends CModule
      */
     public function DoInstall()
     {
-        if ($this->installEvents() && $this->InstallDB()) {
+        if ($this->installEvents() && $this->InstallDB() && $this->installFiles()) {
             \Bitrix\Main\ModuleManager::registerModule($this->MODULE_ID);
         }
+    }
+
+    /**
+     * Устанавливает файлы модуля
+     *
+     * @return boolean
+     */
+    public function installFiles($arParams = array())
+    {
+        if (Bitrix\Main\ModuleManager::isModuleInstalled("sprint.migration"))
+        {
+            $moduleDir = explode('/', __DIR__);
+            array_pop($moduleDir);
+            $moduleDir = implode('/', $moduleDir);
+            $sourceRoot = $moduleDir . '/install/conf/migration.cfg.php';
+            CopyDirFiles(
+                $sourceRoot,
+                $_SERVER["DOCUMENT_ROOT"]."/local/php_interface/migration.acfg.php"
+            );
+        }
+        return true;
     }
 
     /**
@@ -131,7 +152,7 @@ Class aeroidea_settings extends CModule
      */
     public function DoUninstall()
     {
-        if ($this->unInstallEvents()) {
+        if ($this->unInstallEvents() && $this->unInstallFiles()) {
             \Bitrix\Main\ModuleManager::unRegisterModule($this->MODULE_ID);
         }
 
@@ -160,6 +181,16 @@ Class aeroidea_settings extends CModule
     {
         global $DB;
         $DB->RunSQLBatch($this->getDataBaseDir() . "uninstall.sql");
+        return true;
+    }
+
+    /**
+     * Удаляет файлы модуля
+     *
+     * @return boolean
+     */
+    public function unInstallFiles()
+    {
         return true;
     }
 }
