@@ -20,7 +20,6 @@ class ConfigurationMigrationBuilder extends VersionBuilder
     {
         $this->setTitle("Создать миграцию для конфигурации");
         $this->setDescription("");
-        $this->addVersionFields();
     }
 
     /**

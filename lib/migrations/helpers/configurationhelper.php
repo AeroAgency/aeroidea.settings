@@ -336,7 +336,6 @@ class ConfigurationHelper extends Helper
         $exists = $this->prepareExportOption($option);
         if (empty($option['ID'])) {
             $ok = $this->getMode('test') ? true : $this->addOption($configId, $fields);
-            \Aero\Main\Util::log([$ok, "add", $fields], "log-saveOption.txt");
             $this->outNoticeIf($ok, 'Настройка конфигурации "%s" [%s]: добавлена', $fields['TITLE'], $fields['CODE']);
             return $ok;
         }
