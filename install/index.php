@@ -136,11 +136,24 @@ Class aeroidea_settings extends CModule
             $moduleDir = explode('/', __DIR__);
             array_pop($moduleDir);
             $moduleDir = implode('/', $moduleDir);
-            $sourceRoot = $moduleDir . '/install/conf/migration.cfg.php';
-            CopyDirFiles(
-                $sourceRoot,
-                $_SERVER["DOCUMENT_ROOT"]."/local/php_interface/migration.acfg.php"
+
+            $sourceRoot = $moduleDir . '/install/';
+            $targetRoot = $_SERVER['DOCUMENT_ROOT'];
+
+            $parts = array(
+                'conf' => array(
+                    'target' => '/local/php_interface/',
+                    'rewrite' => false,
+                )
             );
+            foreach ($parts as $dir => $config) {
+                CopyDirFiles(
+                    $sourceRoot . $dir,
+                    $targetRoot . $config['target'],
+                    $config['rewrite'],
+                    true
+                );
+            }
         }
         return true;
     }
